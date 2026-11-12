@@ -50,11 +50,11 @@ uv run cache_ops.py ranking
 
 ## Janomeで日本語を分かち書きして全文検索する（任意）
 
-`client/janome_search.py` は、記事の検証用キャッシュとは別のキャッシュで日本語の分かち書き検索を試すスクリプトです。接続先は環境変数で指定します。
+`client/janome_search.py` は、検証用のインデックス（ja_idx）に質問文を5件登録し、原文と分かち書きしたフィールドで検索結果を比べるスクリプトです。セマンティックキャッシュのインデックスとは別なので、デプロイしたキャッシュでそのまま試せます。接続先は環境変数で指定します。
 
 ```bash
 cd client
-export VALKEY_HOST=<キャッシュのエンドポイント> VALKEY_CACHE_NAME=<キャッシュ名>
+export VALKEY_HOST=<スタック出力のCacheEndpoint> VALKEY_CACHE_NAME=semantic-cache
 uv run janome_search.py setup
 uv run janome_search.py search 締め日
 uv run janome_search.py cleanup
