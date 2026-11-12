@@ -1,0 +1,10 @@
+[project]
+name = "semantic-cache-agent"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "bedrock-agentcore>=1.25.4",
+    "boto3>=1.43.126",
+    "strands-agents>=1.64.0",
+    "valkey-glide>=2.6.0",
+]
