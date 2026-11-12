@@ -48,6 +48,18 @@ uv run cache_ops.py stats
 uv run cache_ops.py ranking
 ```
 
+## Janomeで日本語を分かち書きして全文検索する（任意）
+
+`client/janome_search.py` は、記事の検証用キャッシュとは別のキャッシュで日本語の分かち書き検索を試すスクリプトです。接続先は環境変数で指定します。
+
+```bash
+cd client
+export VALKEY_HOST=<キャッシュのエンドポイント> VALKEY_CACHE_NAME=<キャッシュ名>
+uv run janome_search.py setup
+uv run janome_search.py search 締め日
+uv run janome_search.py cleanup
+```
+
 ## 後片付け
 
 ```bash

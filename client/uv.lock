@@ -122,12 +122,14 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "boto3" },
+    { name = "janome" },
     { name = "valkey-glide" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "boto3", specifier = ">=1.43.126" },
+    { name = "janome", specifier = ">=0.5.1" },
     { name = "valkey-glide", specifier = ">=2.6.0" },
 ]
 
@@ -138,6 +140,15 @@ source = { registry = "https://pypi.flatt.tech/simple/" }
 sdist = { url = "https://pypi.flatt.tech/files/packages/f5/08/8eea9d4b8302028f3abb2c0813953f7aec26d33b7a8960ed760e65ff29fa/idna-3.20.tar.gz", hash = "sha256:a7db850025b95ded1eae8a46181a1a6c56c92c96f0e2b005d9ff8dc0210cab44", size = 216463, upload-time = "2026-09-17T14:11:04.752Z" }
 wheels = [
     { url = "https://pypi.flatt.tech/files/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl", hash = "sha256:ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c", size = 69583, upload-time = "2026-09-17T14:11:03.168Z" },
+]
+
+[[package]]
+name = "janome"
+version = "0.5.1"
+source = { registry = "https://pypi.flatt.tech/simple/" }
+sdist = { url = "https://pypi.flatt.tech/files/packages/5f/9e/5dc982eda6e51748ae3d9ad1a62a957805b0a151943cacea34b3d4d0512c/janome-0.5.1.tar.gz", hash = "sha256:9d58e6236f0f64adf13a5e8997c3b13d78103e951cd3594345a9ad9970569753", size = 19381931, upload-time = "2026-11-07T12:20:11.942Z" }
+wheels = [
+    { url = "https://pypi.flatt.tech/files/packages/36/54/be9c7bde12d23540a9aa312806c96d8b52470a9cdd5f9eddf30d916338b7/janome-0.5.1-py3-none-any.whl", hash = "sha256:d9925d941ca8314c1575ee10c529a4cffda9f0044a9f5b45e753c764796fce1f", size = 19650909, upload-time = "2026-11-07T12:20:05.623Z" },
 ]
 
 [[package]]
